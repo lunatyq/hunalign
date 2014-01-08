@@ -187,7 +187,7 @@ void spaceOutBySentenceLength( Trail& bestTrail,
 		 bool utfCharCountingMode )
 {
   // i most egy hole es nem egy rundle indexe.
-  for ( int i=1; i<bestTrail.size()-2; ) // Figyelem, direkt nincs ++i.
+  for ( int i=1; i+1 <= bestTrail.size(); ) // Figyelem, direkt nincs ++i.
   {
     bool huZero = (bestTrail[i].first == bestTrail[i+1].first);
     bool enZero = (bestTrail[i].second== bestTrail[i+1].second);
